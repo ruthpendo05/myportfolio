@@ -205,9 +205,13 @@ const Footer = () => (
            EMAIL ME DIRECTLY 📩
         </a>
         <div className="flex gap-4">
-           {['GITHUB', 'LINKEDIN', 'TWITTER'].map((social, i) => (
-             <a key={i} href="#" className="flex-1 py-4 border border-white/10 text-white text-center rounded-xl text-xs font-bold uppercase tracking-[0.2em] hover:bg-white/5 transition-colors">
-               {social}
+           {[
+             { name: 'GITHUB', url: 'https://github.com/ruthpendo05' },
+             { name: 'LINKEDIN', url: 'https://www.linkedin.com/in/ruth-pendo-913779339/' },
+             { name: 'TWITTER', url: '#' }
+           ].map((social, i) => (
+             <a key={i} href={social.url} target={social.url !== '#' ? "_blank" : undefined} rel={social.url !== '#' ? "noopener noreferrer" : undefined} className="flex-1 py-4 border border-white/10 text-white text-center rounded-xl text-xs font-bold uppercase tracking-[0.2em] hover:bg-white/5 transition-colors">
+               {social.name}
              </a>
            ))}
         </div>
