@@ -9,11 +9,9 @@ const Navbar = () => {
       <div className="text-xl font-bold tracking-tighter flex items-center gap-2">
         <div className="w-8 h-8 bg-[#af7541] rounded-lg flex items-center justify-center text-white text-sm">PM</div>
         <span className="text-white uppercase tracking-tighter shadow-sm font-bold text-lg">
-          PEOMNET <span className="text-[#af7541]">DIGITAL</span>
-        </span>
-      </div>
-
-      {/* Desktop Menu */}
+            PeoMNet <span className="text-[#af7541]">Digital</span>
+          </span>
+        </div>
       <div className="hidden md:flex items-center space-x-10 text-[13px] font-medium uppercase tracking-widest text-slate-300">
         <a href="#home" className="hover:text-[#af7541] transition-colors">Home</a>
         <a href="#about" className="hover:text-[#af7541] transition-colors">Expertise</a>
@@ -49,39 +47,35 @@ const Navbar = () => {
 
 const Hero = () => (
   <section id="home" className="relative min-h-screen pt-32 pb-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between bg-grid">
-    <div className="md:w-3/5 z-10 space-y-8 text-center md:text-left h-full">
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#af7541]/10 border border-[#af7541]/30 text-[#f1c4c6] text-xs font-bold uppercase tracking-wider">
-        Full Stack Web Developer
+    <div className="md:w-2/5 mt-16 md:mt-0 relative flex justify-center z-10 w-full max-w-sm mx-auto md:max-w-none md:mx-0">
+      <div className="relative w-72 h-72 md:w-80 md:h-80">
+        <div className="absolute -inset-4 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(255,214,143,0.70) 0%, rgba(175,117,65,0.45) 28%, transparent 60%)' }}></div>
+        <div className="absolute inset-0 rounded-full opacity-70" style={{ background: 'radial-gradient(circle at center, rgba(255,236,190,0.40) 10%, transparent 60%)' }}></div>
+        <div className="absolute inset-0 border-2 border-[#af7541]/40 rounded-full"></div>
+        <div className="absolute inset-2 overflow-hidden rounded-full bg-slate-900 border-4 border-[#0b2357] shadow-2xl">
+          <img src="/profile.jpg" alt="Ruth Pendo" className="w-full h-full object-cover object-top" />
+        </div>
+        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#0b2357] shadow-xl whitespace-nowrap">
+          PeoMNet Digital
+        </div>
       </div>
-      <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight">
-        Building Secure, <br />
-        <span className="text-[#af7541] underline decoration-4 underline-offset-[12px]">Intelligent Web Apps.</span>
+    </div>
+    <div className="md:w-3/5 z-10 space-y-8 text-center md:text-left h-full">
+      <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight max-w-3xl mx-auto md:mx-0">
+        Building Secure, Intelligent Web Apps.
       </h1>
       <p className="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 leading-relaxed font-medium">
-        I am Ruth Pendo, a Full Stack Web Developer based in Kenya.
-        I specialize in creating high-performance web applications integrated with
+        I am Ruth Pendo, a Full Stack Web Developer based in Kenya specializing in creating high-performance web applications integrated with
         <span className="text-[#f1c4c6]"> Machine Learning</span> and robust
         <span className="text-[#f1c4c6]"> Cybersecurity</span> protocols.
       </p>
-      <div className="flex flex-col md:flex-row gap-4 pt-6 max-w-sm mx-auto md:mx-0">
+      <div className="flex flex-col md:flex-row md:justify-start gap-4 pt-6 max-w-sm mx-auto md:mx-0">
         <button className="px-10 py-5 bg-[#af7541] text-white rounded-xl font-bold border-2 border-[#af7541] hover:bg-[#b87c4a] transition-colors flex items-center justify-center gap-2 group shadow-xl shadow-black/30">
           VIEW MY WORK <span>→</span>
         </button>
         <button className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-colors text-center">
           DOWNLOAD CV
         </button>
-      </div>
-    </div>
-    <div className="md:w-2/5 mt-16 md:mt-0 relative flex justify-center z-10 w-full max-w-sm mx-auto">
-      <div className="relative w-72 h-72 md:w-80 md:h-80">
-        <div className="absolute inset-0 bg-[#af7541]/20 rounded-full blur-3xl"></div>
-        <div className="absolute inset-0 border-2 border-[#af7541]/40 rounded-full"></div>
-        <div className="absolute inset-2 overflow-hidden rounded-full bg-slate-900 border-4 border-[#0b2357] shadow-2xl">
-          <img src="/profile.jpg" alt="Ruth Pendo" className="w-full h-full object-cover object-top" />
-        </div>
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#0b2357] shadow-xl whitespace-nowrap">
-          PEOMNET DIGITAL
-        </div>
       </div>
     </div>
   </section>
@@ -192,7 +186,7 @@ const Footer = () => (
     <div className="grid md:grid-cols-2 gap-16 items-center">
       <div className="text-center md:text-left space-y-6">
         <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">Ready to build something <span className="text-[#af7541]">revolutionary?</span></h2>
-        <p className="text-slate-400 text-lg max-w-lg">Available for full-time professional roles and serious collaborations in PeoMnet Digital.</p>
+        <p className="text-slate-400 text-lg max-w-lg">Available for full-time professional roles and serious collaborations in PeoMNet Digital.</p>
       </div>
       <div className="flex flex-col gap-6">
         <a href="mailto:ruthpendo05@gmail.com" className="w-full py-6 bg-[#af7541] text-white rounded-2xl font-bold text-center text-lg hover:bg-[#b87c4a] transition-colors shadow-2xl shadow-black/40">
@@ -212,7 +206,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs tracking-[0.3em] font-medium gap-8">
-      <p>&copy; 2026 PEOMNET DIGITAL. BY RUTH PENDO.</p>
+      <p>&copy; 2026 PeoMNet Digital. BY RUTH PENDO.</p>
       <div className="flex gap-12">
         <a href="#" className="hover:text-[#af7541] transition-colors uppercase">Privacy</a>
         <a href="#" className="hover:text-[#af7541] transition-colors uppercase">Terms</a>
