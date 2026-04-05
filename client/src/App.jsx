@@ -48,19 +48,7 @@ const Navbar = () => {
 };
 
 const Hero = () => (
-  <section id="home" className="relative min-h-screen pt-20 md:pt-32 pb-20 px-6 md:px-16 flex flex-col md:flex-row-reverse items-center justify-between bg-grid">
-    <div className="md:w-2/5 mt-8 md:mt-0 relative flex justify-center z-10 w-full max-w-[16rem] md:max-w-none mx-auto md:mx-0">
-      <div className="relative w-56 h-56 md:w-80 md:h-80">
-        <div className="absolute inset-0 bg-[#af7541]/20 rounded-full blur-3xl"></div>
-        <div className="absolute inset-0 border-2 border-[#af7541]/40 rounded-full"></div>
-        <div className="absolute inset-2 overflow-hidden rounded-full bg-slate-900 border-4 border-[#0b2357] shadow-2xl">
-          <img src="/profile.jpg" alt="Ruth Pendo" className="w-full h-full object-cover object-top" />
-        </div>
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#0b2357] shadow-xl whitespace-nowrap">
-          PEOMNET DIGITAL
-        </div>
-      </div>
-    </div>
+  <section id="home" className="relative min-h-screen pt-32 pb-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between bg-grid">
     <div className="md:w-3/5 z-10 space-y-8 text-center md:text-left h-full">
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#af7541]/10 border border-[#af7541]/30 text-[#f1c4c6] text-xs font-bold uppercase tracking-wider">
         Full Stack Web Developer
@@ -69,25 +57,12 @@ const Hero = () => (
         Building Secure, <br />
         <span className="text-[#af7541] underline decoration-4 underline-offset-[12px]">Intelligent Web Apps.</span>
       </h1>
-      <div className="space-y-6 max-w-2xl mx-auto md:mx-0">
-        <p className="text-slate-200 text-lg md:text-xl leading-relaxed font-medium">
-          I am Ruth Pendo, a Full Stack Web Developer based in Kenya. I specialize in creating high-performance web applications integrated with
-          <span className="text-[#f1c4c6]"> Machine Learning</span> and robust
-          <span className="text-[#f1c4c6]"> Cybersecurity</span> protocols.
-        </p>
-        <div className="rounded-[2rem] border border-white/10 bg-[#0b2357]/80 shadow-2xl overflow-hidden">
-          <div className="relative h-56">
-            <img src="/profile.jpg" alt="Screenshot preview for Ruth Pendo" className="w-full h-full object-cover brightness-90" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-          </div>
-          <div className="p-6 bg-[#0b2357]/95">
-            <div className="text-[#af7541] text-xs uppercase tracking-[0.3em] font-bold mb-2">Intro screenshot</div>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              This screenshot preview is part of the introduction and sits inside the same section as my statement, showing how my professional brand and portfolio are presented together.
-            </p>
-          </div>
-        </div>
-      </div>
+      <p className="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 leading-relaxed font-medium">
+        I am Ruth Pendo, a Full Stack Web Developer based in Kenya.
+        I specialize in creating high-performance web applications integrated with
+        <span className="text-[#f1c4c6]"> Machine Learning</span> and robust
+        <span className="text-[#f1c4c6]"> Cybersecurity</span> protocols.
+      </p>
       <div className="flex flex-col md:flex-row gap-4 pt-6 max-w-sm mx-auto md:mx-0">
         <button className="px-10 py-5 bg-[#af7541] text-white rounded-xl font-bold border-2 border-[#af7541] hover:bg-[#b87c4a] transition-colors flex items-center justify-center gap-2 group shadow-xl shadow-black/30">
           VIEW MY WORK <span>→</span>
@@ -95,6 +70,18 @@ const Hero = () => (
         <button className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-colors text-center">
           DOWNLOAD CV
         </button>
+      </div>
+    </div>
+    <div className="md:w-2/5 mt-16 md:mt-0 relative flex justify-center z-10 w-full max-w-sm mx-auto">
+      <div className="relative w-72 h-72 md:w-80 md:h-80">
+        <div className="absolute inset-0 bg-[#af7541]/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 border-2 border-[#af7541]/40 rounded-full"></div>
+        <div className="absolute inset-2 overflow-hidden rounded-full bg-slate-900 border-4 border-[#0b2357] shadow-2xl">
+          <img src="/profile.jpg" alt="Ruth Pendo" className="w-full h-full object-cover object-top" />
+        </div>
+        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#0b2357] shadow-xl whitespace-nowrap">
+          PEOMNET DIGITAL
+        </div>
       </div>
     </div>
   </section>
