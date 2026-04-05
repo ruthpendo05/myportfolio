@@ -62,17 +62,20 @@ const Hero = () => (
     </div>
     <div className="md:w-3/5 z-10 space-y-8 text-center md:text-left h-full">
       <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight max-w-3xl mx-auto md:mx-0">
-        Building Secure, Intelligent Web Apps.
+        I am Ruth Pendo
       </h1>
+      <p className="text-2xl md:text-3xl text-slate-300 max-w-2xl mx-auto md:mx-0 leading-relaxed font-normal">
+        A software engineering Student & full-stack web developer
+      </p>
       <p className="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 leading-relaxed font-medium">
-        I am Ruth Pendo, a Full Stack Web Developer based in Kenya specializing in creating high-performance web applications integrated with
-        <span className="text-[#f1c4c6]"> Machine Learning</span> and robust
-        <span className="text-[#f1c4c6]"> Cybersecurity</span> protocols.
+        Passionate about building secure applications and exploring the intersection of
+        <span className="text-[#f1c4c6]"> Machine Learning</span> and
+        <span className="text-[#f1c4c6]"> Cybersecurity</span>.
       </p>
       <div className="flex flex-col md:flex-row md:justify-start gap-4 pt-6 max-w-sm mx-auto md:mx-0">
-        <button className="px-10 py-5 bg-[#af7541] text-white rounded-xl font-bold border-2 border-[#af7541] hover:bg-[#b87c4a] transition-colors flex items-center justify-center gap-2 group shadow-xl shadow-black/30">
+        {/* <button className="px-10 py-5 bg-[#af7541] text-white rounded-xl font-bold border-2 border-[#af7541] hover:bg-[#b87c4a] transition-colors flex items-center justify-center gap-2 group shadow-xl shadow-black/30">
           VIEW MY WORK <span>→</span>
-        </button>
+        </button> */}
         <button className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-colors text-center">
           DOWNLOAD CV
         </button>
@@ -100,9 +103,7 @@ const Skills = () => {
           <h4 className="text-[#f1c4c6] text-sm font-bold uppercase tracking-[0.2em] mb-4">What I Do</h4>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 border-l-4 border-[#af7541] pl-6 leading-tight uppercase tracking-tight">Mastering Dynamic <br />Web Applications.</h2>
           <p className="text-slate-300 mb-10 text-lg leading-relaxed">
-            I build scalable software that prioritizes security from ground zero.
-            Combining the power of **Java/Spring** for backends and **React** for frontends,
-            I provide robust digital experiences backed by **Machine Learning** insights.
+            I specialize in developing end-to-end web applications, focusing on clean code and user experience. My goal is to combine modern development practices with data-driven insights to build software that is both functional and secure.
           </p>
           <div className="grid grid-cols-2 gap-y-8 gap-x-12">
             {skills.map((s, i) => (
@@ -118,13 +119,18 @@ const Skills = () => {
             ))}
           </div>
         </div>
-        <div className="order-1 md:order-2 grid grid-cols-2 sm:grid-cols-4 gap-4 z-10">
-          {items.map((tech, i) => (
-            <div key={i} className="glass-card p-6 rounded-3xl flex flex-col items-center justify-center gap-3 border border-[#af7541]/30 hover:border-[#f1c4c6]/40 transition-colors">
-              <span className="text-3xl grayscale brightness-150">{tech.icon}</span>
-              <span className="text-white text-[10px] font-bold tracking-widest uppercase">{tech.title}</span>
-            </div>
-          ))}
+        <div className="order-1 md:order-2 z-10">
+          <div className="mb-8 text-center md:text-left">
+            <h3 className="text-sm uppercase tracking-[0.25em] text-[#f1c4c6] font-bold">Tools and Frameworks</h3>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {items.map((tech, i) => (
+              <div key={i} className="glass-card p-6 rounded-3xl flex flex-col items-center justify-center gap-3 border border-[#af7541]/30 hover:border-[#f1c4c6]/40 transition-colors">
+                <span className="text-3xl grayscale brightness-150">{tech.icon}</span>
+                <span className="text-white text-[10px] font-bold tracking-widest uppercase">{tech.title}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
