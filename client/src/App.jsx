@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="hidden md:flex items-center space-x-10 text-[13px] font-medium uppercase tracking-widest text-slate-300">
         <a href="#home" className="hover:text-[#af7541] transition-colors">Home</a>
         <a href="#about" className="hover:text-[#af7541] transition-colors">Expertise</a>
-        <a href="#projects" className="hover:text-[#af7541] transition-colors">Projects</a>
+        {/* <a href="#projects" className="hover:text-[#af7541] transition-colors">Projects</a> */}
         <a href="#contact" className="px-5 py-2 border border-[#af7541]/30 bg-[#af7541]/10 text-[#af7541] rounded-full hover:bg-[#af7541] hover:text-white transition-all duration-300">Let's Connect</a>
       </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="absolute top-20 left-0 w-full bg-[#0b2357] border-b border-white/5 flex flex-col items-center py-8 space-y-6 md:hidden z-40 shadow-2xl">
           <a href="#home" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Home</a>
           <a href="#about" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Expertise</a>
-          <a href="#projects" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Projects</a>
+          {/* <a href="#projects" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Projects</a> */}
           <a href="#contact" onClick={toggleMenu} className="px-8 py-3 bg-[#af7541] text-white rounded-full font-bold">Let's Connect</a>
         </div>
       )}
@@ -84,15 +84,14 @@ const Hero = () => (
 const Skills = () => {
   const skills = [
     { name: "React / Next.js", level: "90%" },
-    { name: "Python / AI / ML", level: "85%" },
-    { name: "Java / Spring Boot", level: "82%" },
-    { name: "Cybersecurity Ops", level: "78%" },
+    { name: "Python", level: "85%" },
+    { name: "Java", level: "82%" },
+    { name: "HTML/CSS/JavaScript", level: "78%" },
   ];
   const items = [
     { title: "React", icon: "⚛️" }, { title: "Python", icon: "🐍" },
     { title: "Java", icon: "☕" }, { title: "Node.js", icon: "🌐" },
-    { title: "FastAPI", icon: "⚡" }, { title: "PostgreSQL", icon: "🐘" },
-    { title: "Nmap", icon: "🔍" }, { title: "Git", icon: "🌿" }
+    { title: "MongoDB", icon: "🍃" }, { title: "MySQL", icon: "🗄️" }
   ];
   return (
     <section id="about" className="py-24 px-6 md:px-16 relative overflow-hidden">
@@ -243,7 +242,7 @@ export default function App() {
 
       <Hero />
       <Skills />
-      <Projects />
+      {/* <Projects /> */}
       <Footer />
     </div>
   );
