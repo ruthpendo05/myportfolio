@@ -269,6 +269,7 @@ const Footer = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -286,7 +287,7 @@ const Footer = () => {
     }
 
     setShowError(false);
-    const contactDetails = `Name: ${name}\nEmail: ${email}\nSubject: ${subject || 'N/A'}\nMessage: ${message}`;
+    const contactDetails = `Name: ${name}\nPhone: ${phone || 'N/A'}\nEmail: ${email}\nSubject: ${subject || 'N/A'}\nMessage: ${message}`;
     const whatsappText = `Hello, I got your message from the portfolio.\n\n${contactDetails}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
     const mailtoUrl = `mailto:ruthpendo05@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(whatsappText)}`;
@@ -297,6 +298,7 @@ const Footer = () => {
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     window.open(mailtoUrl, '_blank', 'noopener,noreferrer');
     setName('');
+    setPhone('');
     setEmail('');
     setSubject('');
     setMessage('');
@@ -305,9 +307,11 @@ const Footer = () => {
   return (
     <footer id="contact" className="py-24 px-6 md:px-16 bg-[#071a3a] border-t border-[#af7541]/20">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">Let's Work Together</h2>
-          <p className="text-slate-400 text-lg max-w-2xl">Have a project in mind, a question, or just want to say hi? I'm always open to discussing new opportunities, creative collaborations, or how I can help bring your ideas to life.</p>
+        <div className="mb-16 text-left">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Let’s Build the Future Together</h2>
+          <p className="text-slate-400 text-lg max-w-3xl leading-relaxed">
+            Whether you have a specific project in mind, a technical challenge to solve, or are looking to expand your engineering team, I’m always eager to connect. I’m currently open to <span className="text-[#af7541] font-bold">internships</span>, collaborations, and discussions on how my technical skills can add value to your next big idea.
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16">
@@ -358,7 +362,10 @@ const Footer = () => {
               </div>
             )}
             <form className="space-y-6" onSubmit={handleSubmit}>
-              <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600" />
+              <div className="grid md:grid-cols-2 gap-4">
+                <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600" />
+                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" placeholder="Phone Number" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600" />
+              </div>
               <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your Email" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600" />
               <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows="5" placeholder="Your Message" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600"></textarea>
               
