@@ -14,8 +14,8 @@ const Navbar = () => {
         </div>
       <div className="hidden md:flex items-center space-x-10 text-[13px] font-medium uppercase tracking-widest text-slate-300">
         <a href="#home" className="hover:text-[#af7541] transition-colors">Home</a>
-        <a href="#about" className="hover:text-[#af7541] transition-colors">Expertise</a>
-        {/* <a href="#projects" className="hover:text-[#af7541] transition-colors">Projects</a> */}
+        <a href="#about" className="hover:text-[#af7541] transition-colors">About Me</a>
+        <a href="#services" className="hover:text-[#af7541] transition-colors">Services</a>
         <a href="#contact" className="px-5 py-2 border border-[#af7541]/30 bg-[#af7541]/10 text-[#af7541] rounded-full hover:bg-[#af7541] hover:text-white transition-all duration-300">Let's Connect</a>
       </div>
 
@@ -36,8 +36,8 @@ const Navbar = () => {
       {isOpen && (
         <div className="absolute top-20 left-0 w-full bg-[#0b2357] border-b border-white/5 flex flex-col items-center py-8 space-y-6 md:hidden z-40 shadow-2xl">
           <a href="#home" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Home</a>
-          <a href="#about" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Expertise</a>
-          {/* <a href="#projects" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Projects</a> */}
+          <a href="#about" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">About Me</a>
+          <a href="#services" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Services</a>
           <a href="#contact" onClick={toggleMenu} className="px-8 py-3 bg-[#af7541] text-white rounded-full font-bold">Let's Connect</a>
         </div>
       )}
@@ -46,91 +46,172 @@ const Navbar = () => {
 };
 
 const Hero = () => (
-  <section id="home" className="relative min-h-screen pt-32 pb-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between bg-grid">
-    <div className="md:w-2/5 mt-16 md:mt-0 relative flex justify-center z-10 w-full max-w-sm mx-auto md:max-w-none md:mx-0">
-      <div className="relative w-72 h-72 md:w-80 md:h-80">
-        <div className="absolute -inset-4 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(255,214,143,0.70) 0%, rgba(175,117,65,0.45) 28%, transparent 60%)' }}></div>
-        <div className="absolute inset-0 rounded-full opacity-70" style={{ background: 'radial-gradient(circle at center, rgba(255,236,190,0.40) 10%, transparent 60%)' }}></div>
-        <div className="absolute inset-0 border-2 border-[#af7541]/40 rounded-full"></div>
-        <div className="absolute inset-2 overflow-hidden rounded-full bg-slate-900 border-4 border-[#0b2357] shadow-2xl">
+  <section id="home" className="relative pt-20 pb-4 px-6 md:px-16 flex items-center justify-center text-center overflow-hidden">
+    {/* Full background coding environment image */}
+    <img
+      src="/coding-hero-bg.png"
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+    {/* Dark overlays for readability */}
+    <div className="absolute inset-0 bg-[#071a3a]/60" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#071a3a]/80 via-transparent to-[#071a3a]/90" />
+
+    <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative mb-8 flex justify-center">
+        <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#af7541]/30 bg-[#071a3a] shadow-2xl">
           <img src="/profile.jpg" alt="Ruth Pendo" className="w-full h-full object-cover object-top" />
-        </div>
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#0b2357] shadow-xl whitespace-nowrap">
-          PeoMNet Digital
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#071a3a] shadow-xl whitespace-nowrap">
+            PeoMNet Digital
+          </div>
         </div>
       </div>
-    </div>
-    <div className="md:w-3/5 z-10 space-y-8 text-center md:text-left h-full">
-      <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight max-w-3xl mx-auto md:mx-0">
-        I am Ruth Pendo
-      </h1>
-      <p className="text-2xl md:text-3xl text-slate-300 max-w-2xl mx-auto md:mx-0 leading-relaxed font-normal">
-        A software engineering Student & full-stack web developer
-      </p>
-      <p className="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 leading-relaxed font-medium">
-        Passionate about building secure applications and exploring the intersection of
-        <span className="text-[#f1c4c6]"> Machine Learning</span> and
-        <span className="text-[#f1c4c6]"> Cybersecurity</span>.
-      </p>
-      <div className="flex flex-col md:flex-row md:justify-start gap-4 pt-6 max-w-sm mx-auto md:mx-0">
-        {/* <button className="px-10 py-5 bg-[#af7541] text-white rounded-xl font-bold border-2 border-[#af7541] hover:bg-[#b87c4a] transition-colors flex items-center justify-center gap-2 group shadow-xl shadow-black/30">
-          VIEW MY WORK <span>→</span>
-        </button> */}
-        <button className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-colors text-center">
-          DOWNLOAD CV
-        </button>
+
+      <div className="space-y-4">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">Ruth Pendo</h1>
+        <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          A software engineering Student & full-stack web developer
+        </p>
+        <p className="text-slate-200 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+          Passionate about building secure applications and exploring the intersection of
+          <span className="text-[#f1c4c6]"> Machine Learning</span> and
+          <span className="text-[#f1c4c6]"> Cybersecurity</span>.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <button className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-colors text-center">
+            DOWNLOAD CV
+          </button>
+        </div>
       </div>
     </div>
   </section>
 );
 
-const Skills = () => {
-  const skills = [
-    { name: "React / Next.js", level: "90%" },
-    { name: "Python", level: "85%" },
-    { name: "Java", level: "82%" },
-    { name: "HTML/CSS/JavaScript", level: "78%" },
-  ];
-  const items = [
-    { title: "React", icon: "⚛️" }, { title: "Python", icon: "🐍" },
-    { title: "Java", icon: "☕" }, { title: "Node.js", icon: "🌐" },
-    { title: "MongoDB", icon: "🍃" }, { title: "MySQL", icon: "🗄️" }
-  ];
-  return (
-    <section id="about" className="py-24 px-6 md:px-16 relative overflow-hidden">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <div className="order-2 md:order-1 z-10">
-          <h4 className="text-[#f1c4c6] text-sm font-bold uppercase tracking-[0.2em] mb-4">What I Do</h4>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 border-l-4 border-[#af7541] pl-6 leading-tight uppercase tracking-tight">Mastering Dynamic <br />Web Applications.</h2>
-          <p className="text-slate-300 mb-10 text-lg leading-relaxed">
-            I specialize in developing end-to-end web applications, focusing on clean code and user experience. My goal is to combine modern development practices with data-driven insights to build software that is both functional and secure.
-          </p>
-          <div className="grid grid-cols-2 gap-y-8 gap-x-12">
-            {skills.map((s, i) => (
-              <div key={i} className="space-y-3">
-                <div className="flex flex-col text-sm font-bold uppercase tracking-widest gap-1">
-                  <span className="text-white">{s.name}</span>
-                  <span className="text-[#af7541] text-xs">{s.level}</span>
-                </div>
-                <div className="h-1.5 w-full bg-slate-800/50 rounded-full">
-                  <div className="h-full bg-[#af7541] rounded-full" style={{ width: s.level }}></div>
-                </div>
-              </div>
-            ))}
+/* Techy Divider Banner — sits between Hero and About */
+const TechBanner = () => (
+  <div className="relative w-full h-[40px] md:h-[60px] overflow-hidden select-none">
+    {/* Background Image */}
+    <img
+      src="/techy-banner.png"
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+    {/* Dark gradient overlay top */}
+    <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-[#071a3a] to-transparent z-10" />
+    {/* Dark gradient overlay bottom */}
+    <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#071a3a] to-transparent z-10" />
+    {/* Center overlay tint */}
+    <div className="absolute inset-0 bg-[#071a3a]/40 z-[5]" />
+    {/* Subtle animated scan-line */}
+    <div className="absolute inset-0 z-20 pointer-events-none" style={{
+      backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(175,117,65,0.04) 2px, rgba(175,117,65,0.04) 4px)',
+    }} />
+  </div>
+);
+
+const About = () => (
+  <section id="about" className="relative py-8 px-6 md:px-16 overflow-hidden">
+    {/* Full-section techy background image */}
+    <img
+      src="/techy-about-bg.png"
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover opacity-20"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#071a3a]/90 via-[#071a3a]/70 to-[#071a3a]/90 z-[1]" />
+
+    <div className="absolute z-10 right-4 top-0 hidden xl:block text-[180px] font-black text-[#af7541]/10 leading-none">01</div>
+    <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-10 items-center">
+      <div className="relative rounded-[2.5rem] border border-[#af7541]/20 bg-[#071a3a] overflow-hidden shadow-2xl">
+        <img src="/about-tech.png" alt="Coding Environment" className="w-full h-full min-h-[420px] object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071a3a]/50 via-transparent to-transparent"></div>
+      </div>
+      <div className="space-y-8">
+        <div>
+          <p className="text-[#f1c4c6] text-sm uppercase tracking-[0.3em] mb-4">Discover</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">About Me</h2>
+        </div>
+        <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
+          I specialize in developing end-to-end web applications, focusing on clean code and user experience. My goal is to combine modern development practices with data-driven insights to build software that is both functional and secure.
+        </p>
+        <div className="rounded-3xl border border-[#af7541]/20 bg-[#071a3a]/90 p-6 shadow-xl shadow-black/20">
+          <div className="grid gap-4 sm:grid-cols-2 text-sm text-slate-200">
+            <div className="space-y-3">
+              <div className="text-[#af7541] uppercase tracking-[0.2em] font-bold">Name</div>
+              <div className="text-white">Ruth Pendo</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-[#af7541] uppercase tracking-[0.2em] font-bold">Location</div>
+              <div className="text-white">Kisii, Kenya</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-[#af7541] uppercase tracking-[0.2em] font-bold">Email</div>
+              <div className="text-white">ruthpendo05@gmail.com</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-[#af7541] uppercase tracking-[0.2em] font-bold">Phone</div>
+              <div className="text-white">0746474803</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-[#af7541] uppercase tracking-[0.2em] font-bold">LinkedIn</div>
+              <div><a href="https://linkedin.com/in/ruth-pendo-913779339/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#af7541] transition-colors underline underline-offset-4 decoration-[#af7541]/30">linkedin.com/in/ruth-pendo-913779339/</a></div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-[#af7541] uppercase tracking-[0.2em] font-bold">GitHub</div>
+              <div><a href="https://github.com/ruthpendo05" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#af7541] transition-colors underline underline-offset-4 decoration-[#af7541]/30">github.com/ruthpendo05</a></div>
+            </div>
           </div>
         </div>
-        <div className="order-1 md:order-2 z-10">
-          <div className="mb-8 text-center md:text-left">
-            <h3 className="text-sm uppercase tracking-[0.25em] text-[#f1c4c6] font-bold">Tools and Frameworks</h3>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {items.map((tech, i) => (
-              <div key={i} className="glass-card p-6 rounded-3xl flex flex-col items-center justify-center gap-3 border border-[#af7541]/30 hover:border-[#f1c4c6]/40 transition-colors">
-                <span className="text-3xl grayscale brightness-150">{tech.icon}</span>
-                <span className="text-white text-[10px] font-bold tracking-widest uppercase">{tech.title}</span>
-              </div>
-            ))}
-          </div>
+      </div>
+    </div>
+  </section>
+);
+
+const Services = () => {
+  const cards = [
+    {
+      title: 'React / Node.js',
+      desc: 'Building modern front-end interfaces and backend services with JavaScript.',
+      icon: '⚛️'
+    },
+    {
+      title: 'Python',
+      desc: 'Using Python for scripting, automation, and data-driven features.',
+      icon: '🐍'
+    },
+    {
+      title: 'Java',
+      desc: 'Developing robust backend systems and enterprise applications.',
+      icon: '☕'
+    },
+    {
+      title: 'HTML/CSS/JavaScript',
+      desc: 'Crafting responsive layouts and polished user experiences across devices.',
+      icon: '💻'
+    }
+  ];
+
+  return (
+    <section id="services" className="py-8 px-6 md:px-16 relative overflow-hidden">
+      <div className="absolute right-0 top-0 hidden xl:block text-[180px] font-black text-[#af7541]/10">02</div>
+      <div className="relative max-w-7xl mx-auto grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start">
+        <div className="space-y-6">
+          <p className="text-[#f1c4c6] text-sm uppercase tracking-[0.3em]">What I Do</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">My Services</h2>
+          <p className="text-slate-400 max-w-xl leading-relaxed">
+            Transforming ideas into fully deployed web applications. My approach combines a deep understanding of core technologies like Java and React with a commitment to writing scalable, maintainable code. I thrive on solving technical challenges and building tools that provide real value to users.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {cards.map((card, idx) => (
+            <div key={idx} className="rounded-3xl border border-[#af7541]/20 bg-[#0b2357]/95 p-8 shadow-xl shadow-black/20 hover:border-[#f1c4c6]/40 transition-all">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#af7541]/10 text-3xl">{card.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-3">{card.title}</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">{card.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -186,39 +267,99 @@ const Projects = () => {
   );
 }
 
-const Footer = () => (
-  <footer id="contact" className="py-24 px-6 md:px-16 bg-[#0b2357]/80 backdrop-blur-md border-t border-[#af7541]/20">
-    <div className="grid md:grid-cols-2 gap-16 items-center">
-      <div className="text-center md:text-left space-y-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">Ready to build something <span className="text-[#af7541]">revolutionary?</span></h2>
-        <p className="text-slate-400 text-lg max-w-lg">Available for full-time professional roles and serious collaborations in PeoMNet Digital.</p>
-      </div>
-      <div className="flex flex-col gap-6">
-        <a href="mailto:ruthpendo05@gmail.com" className="w-full py-6 bg-[#af7541] text-white rounded-2xl font-bold text-center text-lg hover:bg-[#b87c4a] transition-colors shadow-2xl shadow-black/40">
-          EMAIL ME DIRECTLY 📩
-        </a>
-        <div className="flex gap-4">
-          {[
-            { name: 'GITHUB', url: 'https://github.com/ruthpendo05' },
-            { name: 'LINKEDIN', url: 'https://www.linkedin.com/in/ruth-pendo-913779339/' },
-            { name: 'TWITTER', url: '#' }
-          ].map((social, i) => (
-            <a key={i} href={social.url} target={social.url !== '#' ? "_blank" : undefined} rel={social.url !== '#' ? "noopener noreferrer" : undefined} className="flex-1 py-4 border border-white/10 text-white text-center rounded-xl text-xs font-bold uppercase tracking-[0.2em] hover:bg-white/5 transition-colors">
-              {social.name}
-            </a>
-          ))}
+const Footer = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const whatsappNumber = '254746474803';
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Validate required fields
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setShowError(true);
+      setShowSuccess(false);
+      setTimeout(() => setShowError(false), 5000);
+      return;
+    }
+
+    setShowError(false);
+    const contactDetails = `Name: ${name}\nEmail: ${email}\nSubject: ${subject || 'N/A'}\nMessage: ${message}`;
+    const whatsappText = `Hello, I got your message from the portfolio.\n\n${contactDetails}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
+    const mailtoUrl = `mailto:ruthpendo05@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(whatsappText)}`;
+
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 5000);
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    window.open(mailtoUrl, '_blank', 'noopener,noreferrer');
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
+
+  return (
+    <footer id="contact" className="py-8 px-6 md:px-16 bg-[#0b2357]/80 backdrop-blur-md border-t border-[#af7541]/20">
+      <div className="grid lg:grid-cols-1 gap-8 items-center">
+        <div className="text-center space-y-8">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">Let's Connect</h2>
+            <p className="text-slate-300 text-base mt-2 max-w-2xl mx-auto">
+              I'm always excited to discuss software engineering, AI, or security.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto bg-[#0b2357]/95 rounded-[2rem] border border-[#af7541]/20 p-6 md:p-10 shadow-2xl">
+            <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-[#af7541]">Contact Form</h3>
+            {showError && (
+              <div className="mb-6 rounded-3xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-200">
+                ⚠️ Please fill in all required fields (Name, Email, and Message) before sending.
+              </div>
+            )}
+            {showSuccess && (
+              <div className="mb-6 rounded-3xl border border-green-400/20 bg-green-500/10 p-4 text-sm text-green-200">
+                Message sent successfully! Your details were forwarded to WhatsApp and email.
+              </div>
+            )}
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div className="grid md:grid-cols-2 gap-6">
+                <label className="block">
+                  <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Name</span>
+                  <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your name" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]" />
+                </label>
+                <label className="block">
+                  <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Email</span>
+                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your email" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]" />
+                </label>
+              </div>
+              <label className="block">
+                <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Subject</span>
+                <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" placeholder="Subject" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]" />
+              </label>
+              <label className="block">
+                <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Message</span>
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows="6" placeholder="Your message" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]"></textarea>
+              </label>
+              <button type="submit" className="w-full rounded-3xl bg-[#af7541] py-4 text-white font-bold uppercase tracking-[0.2em] hover:bg-[#c38a5a] transition-colors">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs tracking-[0.3em] font-medium gap-8">
-      <p>&copy; 2026 PeoMNet Digital. BY RUTH PENDO.</p>
-      <div className="flex gap-12">
-        <a href="#" className="hover:text-[#af7541] transition-colors uppercase">Privacy</a>
-        <a href="#" className="hover:text-[#af7541] transition-colors uppercase">Terms</a>
+
+      <div className="mt-20 pt-10 border-t border-white/5 text-center text-slate-500 text-xs tracking-[0.3em] font-medium">
+        &copy; 2026 PeoMNet Digital. BY RUTH PENDO.
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default function App() {
   const [serverStatus, setServerStatus] = useState("Connecting...");
@@ -247,7 +388,9 @@ export default function App() {
       </div>
 
       <Hero />
-      <Skills />
+      <TechBanner />
+      <About />
+      <Services />
       {/* <Projects /> */}
       <Footer />
     </div>
