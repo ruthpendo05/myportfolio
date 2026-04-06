@@ -7,15 +7,16 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center py-5 px-6 md:px-16 bg-[#0b2357]/90 backdrop-blur-md border-b border-white/5">
       <div className="text-xl font-bold tracking-tighter flex items-center gap-2">
-        <div className="w-8 h-8 bg-[#af7541] rounded-lg flex items-center justify-center text-white text-sm">PM</div>
+        <div className="w-8 h-8 bg-[#af7541] rounded-lg flex items-center justify-center text-white text-sm">RP</div>
         <span className="text-white uppercase tracking-tighter shadow-sm font-bold text-lg">
-            PeoMNet <span className="text-[#af7541]">Digital</span>
+            Ruth Pendo
           </span>
         </div>
       <div className="hidden md:flex items-center space-x-10 text-[13px] font-medium uppercase tracking-widest text-slate-300">
         <a href="#home" className="hover:text-[#af7541] transition-colors">Home</a>
         <a href="#about" className="hover:text-[#af7541] transition-colors">About Me</a>
         <a href="#services" className="hover:text-[#af7541] transition-colors">Services</a>
+        <a href="#projects" className="hover:text-[#af7541] transition-colors">Projects</a>
         <a href="#contact" className="px-5 py-2 border border-[#af7541]/30 bg-[#af7541]/10 text-[#af7541] rounded-full hover:bg-[#af7541] hover:text-white transition-all duration-300">Let's Connect</a>
       </div>
 
@@ -38,6 +39,7 @@ const Navbar = () => {
           <a href="#home" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Home</a>
           <a href="#about" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">About Me</a>
           <a href="#services" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Services</a>
+          <a href="#projects" onClick={toggleMenu} className="text-slate-200 text-lg uppercase tracking-widest hover:text-[#af7541]">Projects</a>
           <a href="#contact" onClick={toggleMenu} className="px-8 py-3 bg-[#af7541] text-white rounded-full font-bold">Let's Connect</a>
         </div>
       )}
@@ -63,7 +65,7 @@ const Hero = () => (
         <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#af7541]/30 bg-[#071a3a] shadow-2xl">
           <img src="/profile.jpg" alt="Ruth Pendo" className="w-full h-full object-cover object-top" />
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#af7541] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full border-2 border-[#071a3a] shadow-xl whitespace-nowrap">
-            PeoMNet Digital
+            Ruth Pendo
           </div>
         </div>
       </div>
@@ -82,6 +84,9 @@ const Hero = () => (
           <button className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-colors text-center">
             DOWNLOAD CV
           </button>
+          <a href="#projects" className="px-10 py-5 bg-[#af7541] text-white rounded-xl font-bold hover:bg-[#c38a5a] transition-all text-center">
+            PROJECTS
+          </a>
         </div>
       </div>
     </div>
@@ -125,7 +130,7 @@ const About = () => (
     <div className="absolute z-10 right-4 top-0 hidden xl:block text-[180px] font-black text-[#af7541]/10 leading-none">01</div>
     <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-10 items-center">
       <div className="relative rounded-[2.5rem] border border-[#af7541]/20 bg-[#071a3a] overflow-hidden shadow-2xl">
-        <img src="/about-tech.png" alt="Coding Environment" className="w-full h-full min-h-[420px] object-cover object-center" />
+        <img src="/about-tech-lady-no-ring.png" alt="Coding Environment" className="w-full h-full min-h-[420px] object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#071a3a]/50 via-transparent to-transparent"></div>
       </div>
       <div className="space-y-8">
@@ -221,44 +226,37 @@ const Services = () => {
 const Projects = () => {
   const projs = [
     {
-      title: "Safeguard ML",
-      tech: "Python / Scikit-learn",
-      desc: "An intelligent intrusion detection system that uses ML models to analyze network logs in real-time.",
-      img: "https://placehold.co/600x400/0b2357/af7541?text=Safeguard+ML"
-    },
-    {
-      title: "SecurePay Integration",
-      tech: "Java / React / Spring",
-      desc: "Highly secure payment integration for M-Pesa including end-to-end encryption features.",
-      img: "https://placehold.co/600x400/0b2357/af7541?text=SecurePay"
-    },
-    {
-      title: "AgroMarket v1",
-      tech: "Full-Stack React Suite",
-      desc: "A decentralized marketplace connecting farmers directly to urban consumers for optimal logistics.",
-      img: "https://placehold.co/600x400/0b2357/af7541?text=AgroMarket"
+      title: "The KSUCU Website",
+      tech: "React / JavaScript / TypeScript / MongoDB / Node.js",
+      desc: "One of the contributors.\n\nA professional university non-denominational Christian student association, where they fellowship in activities and grow together in faith.",
+      img: "/ksucu-hero.png",
+      link: "https://ksucu-mc.co.ke/"
     }
   ];
   return (
     <section id="projects" className="py-24 px-6 md:px-16 relative">
       <div className="mb-16">
-        <h4 className="text-[#f1c4c6] text-sm font-bold uppercase tracking-[0.2em] mb-4 text-center">My Artifacts</h4>
-        <h2 className="text-4xl md:text-6xl font-extrabold text-white text-center leading-tight">Professional <span className="text-[#af7541] underline decoration-4 underline-offset-[16px]">Innovations.</span></h2>
+        <h4 className="text-[#f1c4c6] text-sm font-bold uppercase tracking-[0.2em] mb-4 text-center">Portfolio</h4>
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white text-center leading-tight">My <span className="text-[#af7541] underline decoration-4 underline-offset-[16px]">Projects.</span></h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-10">
+      <div className="max-w-xl mx-auto">
         {projs.map((p, i) => (
           <div key={i} className="glass-card overflow-hidden rounded-[2rem] border border-[#af7541]/20">
             <div className="relative aspect-[4/3]">
-              <img src={p.img} alt={p.title} className="w-full h-full object-cover grayscale brightness-75 opacity-80" />
-              <div className="absolute inset-0 bg-[#0b2357]/40"></div>
+              <img src={p.img} alt={p.title} className="w-full h-full object-cover" />
             </div>
             <div className="p-8 space-y-4">
               <div className="text-[#af7541] text-xs font-bold uppercase tracking-widest">{p.tech}</div>
               <h3 className="text-2xl font-bold text-white tracking-tight">{p.title}</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">{p.desc}</p>
-              <button className="w-full mt-4 py-4 border border-[#af7541]/30 bg-[#af7541]/10 text-[#af7541] rounded-2xl font-bold uppercase tracking-widest text-[11px] hover:bg-[#af7541] hover:text-white transition-colors">
-                VIEW CASE STUDY
-              </button>
+              <p className="text-slate-300 text-sm leading-relaxed whitespace-pre-line">{p.desc}</p>
+              <a 
+                href={p.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block w-full mt-4 py-4 text-center border border-[#af7541]/30 bg-[#af7541]/10 text-[#af7541] rounded-2xl font-bold uppercase tracking-widest text-[11px] hover:bg-[#af7541] hover:text-white transition-all duration-300"
+              >
+                VIEW LIVE SITE
+              </a>
             </div>
           </div>
         ))}
@@ -305,57 +303,82 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="py-8 px-6 md:px-16 bg-[#0b2357]/80 backdrop-blur-md border-t border-[#af7541]/20">
-      <div className="grid lg:grid-cols-1 gap-8 items-center">
-        <div className="text-center space-y-8">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">Let's Connect</h2>
-            <p className="text-slate-300 text-base mt-2 max-w-2xl mx-auto">
-              I'm always excited to discuss software engineering, AI, or security.
-            </p>
+    <footer id="contact" className="py-24 px-6 md:px-16 bg-[#071a3a] border-t border-[#af7541]/20">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">Let's Work Together</h2>
+          <p className="text-slate-400 text-lg max-w-2xl">Have a project in mind, a question, or just want to say hi? I'm always open to discussing new opportunities, creative collaborations, or how I can help bring your ideas to life.</p>
+        </div>
+
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16">
+          {/* Left Side: Contact Info */}
+          <div className="space-y-4">
+            {[
+              { 
+                label: "Email", 
+                value: "ruthpendo05@gmail.com", 
+                href: "mailto:ruthpendo05@gmail.com",
+                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+              },
+              { 
+                label: "GitHub", 
+                value: "ruthpendo05", 
+                href: "https://github.com/ruthpendo05",
+                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              },
+              { 
+                label: "LinkedIn", 
+                value: "Ruth Pendo", 
+                href: "https://linkedin.com/in/ruth-pendo-913779339/",
+                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              },
+              { 
+                label: "Location", 
+                value: "Kisii, Kenya", 
+                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+              }
+            ].map((contact, idx) => (
+              <a key={idx} href={contact.href} className="flex items-center gap-6 p-6 rounded-2xl bg-[#0b2357]/40 border border-white/5 hover:border-[#af7541]/30 transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-[#af7541]/10 flex items-center justify-center text-[#af7541] group-hover:bg-[#af7541] group-hover:text-white transition-all">
+                  {contact.icon}
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white mb-1 uppercase tracking-widest">{contact.label}</div>
+                  <div className="text-slate-400 group-hover:text-slate-200 transition-colors">{contact.value}</div>
+                </div>
+              </a>
+            ))}
           </div>
 
-          <div className="max-w-2xl mx-auto bg-[#0b2357]/95 rounded-[2rem] border border-[#af7541]/20 p-6 md:p-10 shadow-2xl">
-            <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-[#af7541]">Contact Form</h3>
+          {/* Right Side: Form */}
+          <div className="bg-[#0b2357]/40 rounded-3xl border border-white/5 p-8 md:p-12">
             {showError && (
-              <div className="mb-6 rounded-3xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-200">
-                ⚠️ Please fill in all required fields (Name, Email, and Message) before sending.
-              </div>
-            )}
-            {showSuccess && (
-              <div className="mb-6 rounded-3xl border border-green-400/20 bg-green-500/10 p-4 text-sm text-green-200">
-                Message sent successfully! Your details were forwarded to WhatsApp and email.
+              <div className="mb-6 rounded-2xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-200">
+                ⚠️ Please fill in all fields before sending.
               </div>
             )}
             <form className="space-y-6" onSubmit={handleSubmit}>
-              <div className="grid md:grid-cols-2 gap-6">
-                <label className="block">
-                  <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Name</span>
-                  <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your name" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]" />
-                </label>
-                <label className="block">
-                  <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Email</span>
-                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your email" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]" />
-                </label>
+              <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600" />
+              <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your Email" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600" />
+              <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows="5" placeholder="Your Message" className="w-full rounded-2xl border border-white/10 bg-[#071a3a] px-6 py-4 text-white outline-none focus:border-[#af7541] transition-all placeholder:text-slate-600"></textarea>
+              
+              <div className="grid sm:grid-cols-2 gap-4">
+                <button type="submit" className="flex items-center justify-center gap-2 rounded-2xl bg-[#af7541] py-4 text-white font-bold uppercase tracking-widest text-sm hover:bg-[#c38a5a] transition-all">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  Send via Email
+                </button>
+                <button type="button" onClick={() => window.open(`https://wa.me/254746474803?text=Hi Ruth, I saw your portfolio and would like to connect!`, '_blank')} className="flex items-center justify-center gap-2 rounded-2xl border border-[#af7541]/30 bg-[#af7541]/5 text-[#af7541] py-4 font-bold uppercase tracking-widest text-sm hover:bg-[#af7541] hover:text-white transition-all">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Send via WhatsApp
+                </button>
               </div>
-              <label className="block">
-                <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Subject</span>
-                <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" placeholder="Subject" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]" />
-              </label>
-              <label className="block">
-                <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Message</span>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows="6" placeholder="Your message" className="mt-2 w-full rounded-3xl border border-white/10 bg-[#102755] px-5 py-4 text-white outline-none transition focus:border-[#af7541]"></textarea>
-              </label>
-              <button type="submit" className="w-full rounded-3xl bg-[#af7541] py-4 text-white font-bold uppercase tracking-[0.2em] hover:bg-[#c38a5a] transition-colors">
-                Send Message
-              </button>
             </form>
           </div>
         </div>
       </div>
 
-      <div className="mt-20 pt-10 border-t border-white/5 text-center text-slate-500 text-xs tracking-[0.3em] font-medium">
-        &copy; 2026 PeoMNet Digital. BY RUTH PENDO.
+      <div className="mt-24 pt-10 border-t border-white/5 text-center text-slate-500 text-[10px] tracking-[0.4em] font-bold uppercase transition-all">
+        &copy; 2026 RUTH PENDO &bull; Software Engineer
       </div>
     </footer>
   );
@@ -390,8 +413,11 @@ export default function App() {
       <Hero />
       <TechBanner />
       <About />
+      <TechBanner />
       <Services />
-      {/* <Projects /> */}
+      <TechBanner />
+      <Projects />
+      <TechBanner />
       <Footer />
     </div>
   );
